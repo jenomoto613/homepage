@@ -113,6 +113,15 @@
     .closing h2 em { color: var(--acid); font-style: normal; }
     .closing p { max-width: 620px; margin: 30px auto 0; color: var(--muted); font-size: 17px; }
 
+    .contact { padding-top: 0; border-top: 0; }
+    .contact-card { position: relative; overflow: hidden; padding: clamp(36px, 7vw, 90px); border: 1px solid var(--line); border-radius: 30px; background: var(--acid); color: var(--bg); }
+    .contact-card::after { content: "@"; position: absolute; right: -2%; bottom: -35%; color: rgba(9,10,12,.09); font-size: clamp(210px, 35vw, 520px); font-weight: 900; line-height: 1; pointer-events: none; }
+    .contact-card .section-no { color: rgba(9,10,12,.6); }
+    .contact-card h2 { position: relative; z-index: 1; max-width: 800px; margin-top: 25px; }
+    .email { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: 14px; margin-top: 48px; padding-bottom: 5px; border-bottom: 2px solid currentColor; text-decoration: none; font-size: clamp(17px, 2.5vw, 28px); font-weight: 750; letter-spacing: -.025em; }
+    .email span { transition: transform .2s ease; }
+    .email:hover span { transform: translate(5px,-5px); }
+
     footer { border-top: 1px solid var(--line); padding: 36px 0; color: var(--muted); font-size: 12px; }
     footer .wrap { display: flex; justify-content: space-between; gap: 24px; }
 
@@ -148,7 +157,7 @@
   <nav id="nav">
     <div class="wrap nav-inner">
       <a class="logo" href="#top"><span class="logo-mark"></span>STAFF CARRIER</a>
-      <div class="nav-links"><a href="#work">Work</a><a href="#approach">Approach</a><a class="status" href="#about">Independent studio</a></div>
+      <div class="nav-links"><a href="#work">Work</a><a href="#approach">Approach</a><a href="#contact">Contact</a><a class="status" href="#about">Independent studio</a></div>
     </div>
   </nav>
 
@@ -204,6 +213,16 @@
         <div class="section-no">03 / STAFF CARRIER</div>
         <h2>We make small things that feel <em>unexpectedly alive.</em></h2>
         <p>STAFF CARRIER is an independent Japanese studio working across software, games, and creative digital experiments.</p>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <div class="contact-card">
+          <div class="section-no">04 / CONTACT</div>
+          <h2>Have something interesting in mind?</h2>
+          <a class="email" href="mailto:info@staffcarrier.co.jp">info@staffcarrier.co.jp <span>↗</span></a>
+        </div>
       </div>
     </section>
   </main>
