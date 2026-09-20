@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iphone duo test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 右方向へシームレスに流れる無限スクロールアニメーション */
+        @keyframes scrollRight {
+            0% {
+                transform: translateX(-50%);
+            }
+            100% {
+                transform: translateX(0%);
+            }
+        }
+
+        .scroll-track {
+            display: flex;
+            width: 200%;
+            height: 100%;
+            animation: scrollRight 30s linear infinite;
+            will-change: transform;
+        }
+    </style>
+</head>
+<body class="m-0 p-0 overflow-hidden bg-black w-screen h-screen flex flex-col">
+
+    <!-- 上段 -->
+    <div class="w-full h-[45%] overflow-hidden relative border-b border-gray-800">
+        <div class="scroll-track">
+            <img src="mmachi.jpeg" 
+                 alt="mmachi" 
+                 class="w-1/2 h-full object-cover flex-shrink-0"
+                 onerror="this.onerror=null; this.src='https://placehold.co/1920x1080/38bdf8/ffffff?text=machi.jpeg+Not+Found';">
+            <img src="mmachi.jpeg" 
+                 alt="mmachi" 
+                 class="w-1/2 h-full object-cover flex-shrink-0"
+                 onerror="this.onerror=null; this.src='https://placehold.co/1920x1080/38bdf8/ffffff?text=machi.jpeg+Not+Found';">
+        </div>
+    </div>
+
+    <!-- 下段 -->
+    <div class="w-full h-[55%] overflow-hidden relative">
+        <div class="scroll-track">
+            <img src="mishi.jpeg" 
+                 alt="mishi" 
+                 class="w-1/2 h-full object-cover flex-shrink-0"
+                 onerror="this.onerror=null; this.src='https://placehold.co/1920x1080/38bdf8/ffffff?text=machi.jpeg+Not+Found';">
+            <img src="mishi.jpeg" 
+                 alt="mishi" 
+                 class="w-1/2 h-full object-cover flex-shrink-0"
+                 onerror="this.onerror=null; this.src='https://placehold.co/1920x1080/38bdf8/ffffff?text=machi.jpeg+Not+Found';">
+        </div>
+    </div>
+
+</body>
+</html>
